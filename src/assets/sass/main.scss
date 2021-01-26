@@ -1,0 +1,10 @@
+@import './colors.scss';
+
+body {
+  background-color: $bg-color;
+  padding: 0;
+  margin: 0;
+}
+
+@import '../../containers/style.scss';
+@import '../../components/style.scss';

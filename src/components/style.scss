@@ -1,0 +1,66 @@
+.main {
+  display: block;
+  position: relative;
+  margin-bottom: 15px;
+  cursor: pointer;
+  font-size: 20px;
+  .outer-checkbox {
+    padding: 10px 12px 11px;
+    &:hover {
+      background-color: $check-hover;
+      border-radius: 50%;
+    }
+    &:focus {
+      border: 1px solid $check-border;
+      background-color: $check-hover;
+      border-radius: 50%;
+    }
+    &:active {
+      background-color: $check-active;
+      border-radius: 50%;
+    }
+    input[type="checkbox"] {
+      visibility: hidden;
+    }
+    input {
+      &:checked {
+        ~ .checkmark {
+          background-color: $input-checked;
+          border-color: $input-checked;
+          &:after {
+            display: block;
+          }
+        }
+      }
+    }
+    .checkmark {
+      position: absolute;
+      top: 0;
+      left: 10px;
+      height: 24px;
+      width: 24px;
+      border: 1px solid $checkmark-border;
+      border-radius: 3px;
+      box-sizing: border-box;
+      margin: 0 auto;
+      &:after {
+        content: "";
+        position: absolute;
+        display: none;
+        left: 7px;
+        bottom: 5px;
+        width: 5px;
+        height: 12px;
+        border: solid $checkmark-after;
+        border-width: 0 3px 3px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+      &:hover {
+        background-color: $main-hover;
+        border-color: $input-checked;
+      }
+    }
+  }
+}
