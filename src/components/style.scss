@@ -32,6 +32,12 @@
           }
         }
       }
+      &[disabled]{
+        ~ .checkmark {
+          background-color: $checkmark-disabled;
+          border-color: $checkmark-disabled;
+        }
+      }
     }
     .checkmark {
       position: absolute;
